@@ -1,7 +1,5 @@
 # Axes Are Weapons Too
 
-Installation, compatibility and configuration — in [README.md](README.md).
-
 Contents:
 
 - [Gameplay](#gameplay)
