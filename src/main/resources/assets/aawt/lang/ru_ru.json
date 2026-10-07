@@ -1,0 +1,21 @@
+{
+	"aawt.midnightconfig.title": "Настройки Axes Are Weapons Too",
+	"modmenu.descriptionTranslation.aawt": "Превращает топор в полноценное оружие с собственными зачарованиями.",
+	"aawt.midnightconfig.knockbackSuppression": "Подавление отбрасывания",
+	"aawt.midnightconfig.knockbackSuppression.tooltip": "Множитель сопротивления отбрасыванию для топоров. Игнорирует зачарования. Значение 0.4 соответствует полному сету незеритовой брони.",
+	"aawt.midnightconfig.beheading": "Обезглавливание",
+	"aawt.midnightconfig.cleaving": "Прорубание",
+	"aawt.midnightconfig.playerHeadNaming": "Наименование отсечённой головы игрока",
+	"aawt.midnightconfig.playerHeadNaming.tooltip": "%username% — жертва, %killer% — убийца, %uuid% — UUID жертвы; ключ перевода в шаблоне заменяется текстом с языка клиента. Встроенный ключ: aawt.head_naming.head_of. Пустая строка оставляет ванильное имя.",
+	"aawt.midnightconfig.playerHeadLore": "Описание отсечённой головы игрока",
+	"aawt.midnightconfig.playerHeadLore.tooltip": "Шаблон строки описания под именем головы. %username% — жертва, %killer% — убийца, %uuid% — UUID жертвы; ключ перевода в шаблоне заменяется текстом с языка клиента. Встроенные ключи: aawt.head_description.killed_by, aawt.head_description.chopped_by, aawt.head_description.dynamic (ванильная строка «Динамический»). Пустая строка убирает и описание, и «Динамический».",
+	"aawt.attribute.knockback_suppression": "Подавление отбрасывания",
+	"enchantment.aawt.beheading": "Обезглавливание",
+	"enchantment.aawt.beheading.desc": "Убитый топором моб или игрок может оставить свою голову.",
+	"enchantment.aawt.cleaving": "Прорубание",
+	"enchantment.aawt.cleaving.desc": "Пробивающий удар топором игнорирует часть защиты щита. Также щит дольше остаётся отключённым.",
+	"aawt.head_naming.head_of": "Голова игрока",
+	"aawt.head_description.killed_by": "Убит игроком",
+	"aawt.head_description.chopped_by": "Отсечена игроком",
+	"aawt.head_description.dynamic": "Динамический"
+}

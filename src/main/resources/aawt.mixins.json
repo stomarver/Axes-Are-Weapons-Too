@@ -1,0 +1,22 @@
+{
+	"required": true,
+	"package": "io.github.stomarver.aawt.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"EnchantmentMixin",
+		"ItemStackAxeTooltipMixin",
+		"LivingEntityBeheadingMixin",
+		"LivingEntityCleavingMixin",
+		"LivingEntityKnockbackMixin",
+		"PackRepositoryMixin",
+		"PlayerHeadItemMixin",
+		"PlayerHeadLoreTooltipMixin",
+		"PlayerKnockbackMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

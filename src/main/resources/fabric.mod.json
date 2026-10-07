@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "aawt",
+	"version": "${version}",
+	"name": "Axes Are Weapons Too",
+	"description": "Turns the axe into a proper weapon with its own enchantments.",
+	"authors": [
+		"st0m4rv3r"
+	],
+	"contact": {
+		"homepage": "https://github.com/stomarver",
+		"sources": "https://github.com/stomarver",
+		"issues": "https://github.com/stomarver"
+	},
+	"license": "Apache-2.0",
+	"icon": "assets/aawt/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.stomarver.aawt.Aawt"
+		],
+		"client": [
+			"io.github.stomarver.aawt.client.AawtClient"
+		]
+	},
+	"mixins": [
+		"aawt.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": "*"
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"values": [
+		{
+			"id": "aawt:cleaving",
+			"required": false
+		},
+		{
+			"id": "aawt:beheading",
+			"required": false
+		}
+	]
+}
