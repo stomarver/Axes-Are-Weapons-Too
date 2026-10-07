@@ -10,13 +10,12 @@ anvil keeps apart, and Beheading takes the victim's head.
 - **Version:** 1-draft
 - **Minecraft:** 26.3 (Java Edition)
 - **Loader:** Fabric 0.19.5 and later
-- **Java:** 25 and later
+- **Java:** 25
 - **Side:** server-side, client optional
-- **License:** Apache-2.0
+- **License:** [Apache-2.0](https://github.com/stomarver/Axes-Are-Weapons-Too/blob/main/license.md)
 - **Author:** st0m4rv3r
-- **Source:** <https://github.com/stomarver>
 
-Chances, levels, groups and head templates in full — in [WIKI.md](WIKI.md).
+Chances, levels, groups and head templates in full — in [Wiki](wiki.md).
 
 ## Features
 
