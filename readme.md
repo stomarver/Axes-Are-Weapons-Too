@@ -65,6 +65,3 @@ file for display alone.
 | `cleaving` | `true` | registers Cleaving |
 | `playerHeadNaming` | `aawt.head_naming.head_of %username%` | head name template |
 | `playerHeadLore` | `aawt.head_description.chopped_by %killer%` | description line template |
-
-
-> _(Not to be confused with [Axes Are Weapons](https://modrinth.com/mod/axes-are-weapons))_
