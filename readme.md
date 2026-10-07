@@ -1,19 +1,14 @@
 # Axes Are Weapons Too
 
-> Not to be confused with [Axes Are Weapons](https://modrinth.com/mod/axes-are-weapons).
-
 **Axes Are Weapons Too** (aawt) is a server-side Fabric mod for Minecraft 26.3
 that makes the axe a weapon of its own: axe hits suppress knockback, the
 enchantments an axe carries split into a weapon and a tool family that the
 anvil keeps apart, and Beheading takes the victim's head.
 
-- **Version:** 1-draft
 - **Minecraft:** 26.3 (Java Edition)
 - **Loader:** Fabric 0.19.5 and later
 - **Java:** 25
 - **Side:** server-side, client optional
-- **License:** [Apache-2.0](https://github.com/stomarver/Axes-Are-Weapons-Too/blob/main/license.md)
-- **Author:** st0m4rv3r
 
 Chances, levels, groups and head templates in full — in [Wiki](wiki.md).
 
@@ -70,3 +65,6 @@ file for display alone.
 | `cleaving` | `true` | registers Cleaving |
 | `playerHeadNaming` | `aawt.head_naming.head_of %username%` | head name template |
 | `playerHeadLore` | `aawt.head_description.chopped_by %killer%` | description line template |
+
+
+> _(Not to be confused with [Axes Are Weapons](https://modrinth.com/mod/axes-are-weapons))_
