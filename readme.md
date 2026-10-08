@@ -1,66 +1,72 @@
 # Axes Are Weapons Too
 
-**Axes Are Weapons Too** (aawt) is a server-side Fabric mod for Minecraft 26.3
-that makes the axe a weapon of its own: axe hits suppress knockback, the
-enchantments an axe carries split into a weapon and a tool family that the
-anvil keeps apart, and Beheading takes the victim's head.
+**Axes Are Weapons Too** (aawt) is a server-side Fabric mod for Minecraft
+26.3. It reduces the knockback from axe hits, adds two enchantments for axes,
+stops the anvil from mixing weapon and tool enchantments on one axe, and names
+the player heads that Beheading drops.
 
 - **Minecraft:** 26.3 (Java Edition)
 - **Loader:** Fabric 0.19.5 and later
 - **Java:** 25
 - **Side:** server-side, client optional
+- **Source:** <https://github.com/stomarver/Axes-Are-Weapons-Too>
 
-Chances, levels, groups and head templates in full — in [Wiki](wiki.md).
+Chances, levels, groups and head templates are described in [wiki.md](wiki.md).
 
 ## Features
 
-**Knockback suppression.** Every hit with any axe removes a configured share
-of the knockback the target receives; the default 40% is what a full netherite
-armor set removes. The share applies after the Knockback enchantment has
-contributed, so the enchantment is suppressed along with everything else.
+**Knockback suppression.** The server multiplies the knockback of every axe
+hit by `1 - knockbackSuppression`. The default value 0.4 equals the knockback
+resistance of a full set of netherite armor, so an axe hit pushes its target
+as little as a normal hit would push a player in full netherite. Boats and
+minecarts are not affected.
 
-**Beheading and Cleaving.** Beheading makes a kill with the axe drop the
-victim's head, player heads included; Cleaving punches through a shield's
-protection and keeps the shield disabled longer. Both are data-driven and
-switchable off at the registry level.
+**Beheading and Cleaving.** Beheading gives a chance to drop the victim's head
+on a kill, player heads included. Cleaving makes axe hits ignore part of a
+shield's protection and keep the shield disabled longer. Both are defined in a
+built-in data pack and both can be turned off completely.
 
-**Weapon and tool groups.** The enchantments an axe carries form two families
-the anvil refuses to mix on one axe, so a battle axe and a chopping axe stay
-separate items.
+**Weapon and tool groups.** Sharpness, Smite, Bane of Arthropods and Cleaving
+are weapon enchantments; Efficiency, Fortune and Silk Touch are tool
+enchantments. The anvil refuses to combine the two groups on one axe, so a
+combat axe and a work axe cannot be merged into one item. Beheading combines
+with both groups.
 
-**Severed player heads.** A head dropped by Beheading is named from a template
-— a translation key inside it renders in the reader's own language — and
-carries a grey description line in the slot of the vanilla "Dynamic" line. An
-empty template value silences the line altogether.
+**Severed player heads.** A head dropped by Beheading is named from a
+template; the default reads "Head of st0m4rv3r". Translation keys inside the
+template are rendered by each client in its own language. Under the name the
+head shows a grey description line, by default "Chopped by X", in place of the
+vanilla "Dynamic" line. An empty template value removes the line.
 
 ## Installation
 
-A jar in the server's `mods/` folder enables every mechanic; clients are not
-required. Without the mod a client sees severed heads under their vanilla
-profile name and "Dynamic" line, and no axe line in tooltips. In singleplayer
-the mod goes on the client, whose integrated server loads it. On a server
-without the mod the client mod stays inert: the server is authoritative.
+Put the jar in the server's `mods/` folder. Clients do not need the mod: a
+client without it sees severed heads with their vanilla profile name and the
+usual "Dynamic" line, and no suppression line in axe tooltips. In singleplayer
+the mod goes in the client's `mods/` folder and the integrated server loads it
+from there. If the server does not have the mod, the client mod does nothing:
+all mechanics run on the server.
 
 ## Compatibility
 
 | Mod | Type | Role |
 | --- | --- | --- |
 | Fabric API | required | lifecycle events and the settings payload |
-| MidnightLib | bundled | config file and screen; jar-in-jar, never installed on its own |
-| Mod Menu | optional | the mod page and the entry to the config screen |
+| MidnightLib | bundled | config file and screen, jar-in-jar, never installed separately |
+| Mod Menu | optional | the entry to the config screen |
 | Enchantment Descriptions | optional | enchantment descriptions in tooltips, from the `.desc` keys |
-| Axes Are Weapons | incompatible | merges the families this mod splits; loader refuses to load both |
+| Axes Are Weapons | incompatible | merges the groups this mod separates; the loader refuses to load both |
 
 ## Configuration
 
-Settings live in `config/aawt.json`, editable by hand or through the screen
-(Mod Menu — Axes Are Weapons Too). Mechanics read the server file only; on a
-foreign server the client receives the values in a payload and uses its own
-file for display alone.
+Settings are stored in `config/aawt.json` and can be edited by hand or through
+the config screen (Mod Menu > Axes Are Weapons Too). The mechanics read the
+server's file. A client on a foreign server receives the server's values in a
+payload and uses its own file for display only.
 
 | Key | Default | Purpose |
 | --- | --- | --- |
-| `knockbackSuppression` | `0.4` | share of knockback an axe hit suppresses |
+| `knockbackSuppression` | `0.4` | how much of the knockback from axe hits is removed |
 | `beheading` | `true` | registers Beheading |
 | `cleaving` | `true` | registers Cleaving |
 | `playerHeadNaming` | `aawt.head_naming.head_of %username%` | head name template |

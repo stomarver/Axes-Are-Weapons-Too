@@ -8,9 +8,9 @@
 		"st0m4rv3r"
 	],
 	"contact": {
-		"homepage": "https://github.com/stomarver",
-		"sources": "https://github.com/stomarver",
-		"issues": "https://github.com/stomarver"
+		"homepage": "https://github.com/stomarver/Axes-Are-Weapons-Too",
+		"sources": "https://github.com/stomarver/Axes-Are-Weapons-Too",
+		"issues": "https://github.com/stomarver/Axes-Are-Weapons-Too/issues"
 	},
 	"license": "Apache-2.0",
 	"icon": "assets/aawt/icon.png",
@@ -31,6 +31,9 @@
 		"minecraft": "~26.3",
 		"java": ">=25",
 		"fabric-api": "*"
+	},
+	"breaks": {
+		"axesareweapons": "*"
 	},
 	"suggests": {
 		"modmenu": "*"

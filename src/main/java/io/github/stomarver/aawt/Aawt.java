@@ -57,8 +57,8 @@ public class Aawt implements ModInitializer {
 		SettingsPayload settings = EffectiveSettings.get();
 		Registry<Enchantment> enchantments = server.registryAccess().lookupOrThrow(Registries.ENCHANTMENT);
 
-		LOGGER.info("Server settings: knockback suppression {}%; enchantments - {}, {}; groups - weapon {}, tool {}; head naming '{}'; head lore '{}'",
-				(int) Math.round(settings.knockbackSuppression() * 100.0),
+		LOGGER.info("Server settings: knockback suppression {}; enchantments - {}, {}; groups - weapon {}, tool {}; head naming '{}'; head lore '{}'",
+				settings.knockbackSuppression(),
 				enchantmentState(AawtConfig.beheading, AawtEnchantments.BEHEADING, enchantments),
 				enchantmentState(AawtConfig.cleaving, AawtEnchantments.CLEAVING, enchantments),
 				groupContents(enchantments, AxeEnchantmentGroups.WEAPON),

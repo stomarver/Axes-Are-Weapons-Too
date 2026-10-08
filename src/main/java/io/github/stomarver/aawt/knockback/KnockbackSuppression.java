@@ -15,7 +15,9 @@ import net.minecraft.world.item.component.ItemAttributeModifiers;
  *
  * <p>An axe hit is treated as if the target had {@link #amount()} more knockback resistance:
  * the knockback power is multiplied by {@code 1 - amount}, exactly like vanilla multiplies it
- * by {@code 1 - KNOCKBACK_RESISTANCE} inside {@code LivingEntity#knockback}. Because it is applied
+ * by {@code 1 - KNOCKBACK_RESISTANCE} inside {@code LivingEntity#knockback}. The default
+ * {@code 0.4} equals the knockback resistance of a full set of netherite armor
+ * ({@code ArmorMaterials.NETHERITE} carries {@code 0.1} per piece). Because it is applied
  * to the power of the hit and not to the attacker, it does not care about enchantments: the extra
  * knockback of Knockback or of a sprint hit is reduced by the same share.
  *
@@ -67,7 +69,7 @@ public final class KnockbackSuppression {
 	 * Suppression" in English, "+4 Подавление отбрасывания" in Russian.
 	 *
 	 * <p>The number is the configured share times ten and the line is blue, so a default axe reads
-	 * like an attribute bonus of a piece of netherite armour would: 0.4 -&gt; "+4".
+	 * like a vanilla attribute bonus line: 0.4 -&gt; "+4".
 	 */
 	public static Component tooltipLine() {
 		return Component.translatable(

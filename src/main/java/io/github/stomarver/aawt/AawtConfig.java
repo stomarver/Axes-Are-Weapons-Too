@@ -13,7 +13,7 @@ public class AawtConfig extends MidnightConfig {
 
 	/**
 	 * Knockback suppression of an axe, enchantment independent. {@code 0.0} disables it, {@code 1.0}
-	 * removes the knockback completely. 0.4 equals a full set of netherite armour (4 * 10%).
+	 * removes the knockback completely. 0.4 equals a full set of netherite armor (4 * 10%).
 	 */
 	@Entry(min = 0.0, max = 1.0, isSlider = true)
 	public static double knockbackSuppression = 0.4;

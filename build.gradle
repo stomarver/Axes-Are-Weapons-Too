@@ -4,14 +4,14 @@ plugins {
 }
 
 // Mod version: <number>-<stage>, stages go paper > draft > proof > review > gold.
-version = "1-draft"
+version = "2-draft"
 group = project.group
 
 base {
 	archivesName = "aawt"
 }
 
-// Release file name: aawt_1-draft+263.jar - the mod id, the version and the Minecraft
+// Release file name: aawt_2-draft+263.jar - the mod id, the version and the Minecraft
 // version without its dots.
 def mcTag = project.minecraft_version.toString().replace('.', '')
 def aawtJarName = "${project.base.archivesName.get()}_${project.version}+${mcTag}.jar"
@@ -80,7 +80,7 @@ java {
 
 // The jar that ships. With unobfuscated Minecraft there is no separate remapJar step any more:
 // loom feeds the jar-in-jar entries (the bundled MidnightLib) straight into this task, so its
-// output is already the file a player downloads - aawt_1-draft+263.jar.
+// output is already the file a player downloads - aawt_2-draft+263.jar.
 tasks.named('jar') {
 	def projectName = project.name
 	inputs.property "projectName", projectName

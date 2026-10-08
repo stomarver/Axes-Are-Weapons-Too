@@ -62,6 +62,6 @@ public final class SettingsSync {
 			}
 		}
 
-		Aawt.LOGGER.info("Knockback suppression is now {}%, clients were notified", (int) Math.round(settings.knockbackSuppression() * 100.0));
+		Aawt.LOGGER.info("Knockback suppression is now {}, clients were notified", settings.knockbackSuppression());
 	}
 }
